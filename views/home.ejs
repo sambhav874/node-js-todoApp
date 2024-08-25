@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Welcome to the Todo App</h1>
+    <a href="/create-todo">Create a New Todo</a>
+    
+    <h2>Todo List</h2>
+    <% if (todos.length > 0) { %>
+        <ul>
+            <% todos.forEach(todo => { %>
+                <li><%= todo %></li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No todos available. Add some!</p>
+    <% } %>
+</body>
+</html>

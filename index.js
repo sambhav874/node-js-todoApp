@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  res.send("Hello World  , I am Sambhav .");
+  res.render('home', { todos });
 });
 
 app.get('/create-todo' ,(req , res) => {
